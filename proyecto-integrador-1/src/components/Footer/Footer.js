@@ -4,7 +4,7 @@ import './styles.css';
 function Footer() {
     return (
         <footer>
-            <h1>Integrandes del grupo:</h1>
+            <h1>Integrantes del grupo:</h1>
                 <ul> 
                     <li>Mendelsohn, Mariano</li>
                     <li>Tabanera, Facundo</li>
