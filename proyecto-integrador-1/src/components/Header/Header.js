@@ -5,14 +5,14 @@ function Header(props) {
     return (
         <header>
             <div>
-                <div ClassName="identidad"> 
+                <div className = "identidad"> 
                     
-                    <img ClassName='logo' src= './MusicHubLogo.jpeg' alt='MusicHub'></img> 
+                    <img className= "logo" src= './MusicHubLogo.jpeg' alt='MusicHub'></img> 
 
                      <h1>MusicHub</h1>
                      
                 </div>
-                <div ClassName="nav-bar">
+                <div className="nav-bar">
                     <nav>
                     {props.menu.map((opcion, idx) =><li key={`${Date.now()}-${idx}`} >{opcion}</li>)}
                     </nav>

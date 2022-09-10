@@ -4,14 +4,25 @@ div {
     align-items: center;
 }
 
+.identidad {
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+}
 
-img {
+.logo {
+  height: 150px;
+  width: 250px;
+  border-radius: 50%;
+
+}
+/* img {
     height: 150px;
     width: 250px;
     border-radius: 50%;
     justify-content: center;
     
-}
+} */
 
 h1 {
   color: black;

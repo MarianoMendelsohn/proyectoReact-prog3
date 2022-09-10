@@ -1,22 +1,57 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles.css'; 
 
-function Home(props) {
-    <form action="" method="GET" ClassName="search-form">
-					<input type="text" name="search" placeholder="Buscar productos, marcas y más" ClassName="search-form_input"></input>
-					<button type="submit" ClassName="search-form_button"><i ClassName="fas fa-search"></i></button>
-	</form>;
+
+class Home extends Component {
+
+    constructor(props){
+        super(props)
+        this.state({
+            verMas: false,
+            textoBoton: 'Ver más'
+        })
+    }
+
+    mostrarMas(){
+        if (this.state.verMas) {
+            this.setState({
+                verMas: false,
+                textoBoton: 'Ver más'
+            })
+        } else {
+            this.setState({
+                verMas: true,
+                textoBotón: 'Ver menos'
+            })
+        }
+    }
+
+    render(){
+
+    return(
 
     <div>
+
         <section>
             <h2>TopHub</h2>
+            <img src='' alt='nombre del tema'/>
+            <h4>Nombre del tema</h4>
+            <button onClick={()=> this.mostrarMas()}>{this.state.textoBoton}</button>
+            <p>Detalle: Botón que me mande a la página de detalles.</p>
+            <p>Favorito: Botón que agregue el tema a mis favs</p>
         </section>
-    </div>;
-    <div>
-    <section>
-        <h2>PainHub</h2>
-    </section>
+
+        <section>
+            <h2>PainHub</h2>
+            <img src='' alt='nombre del tema'/>
+            <h4>Nombre del tema</h4>
+            <button onClick={()=> this.mostrarMas()}>{this.state.textoBoton}</button>
+            <p>Detalle: Botón que me mande a la página de detalles.</p>
+            <p>Favorito: Botón que agregue el tema a mis favs</p>
+        </section>
+
 </div>
-}
+
+)}}
 
 export default Home
