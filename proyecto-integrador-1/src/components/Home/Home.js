@@ -6,10 +6,10 @@ class Home extends Component {
 
     constructor(props){
         super(props)
-        this.state({
+        this.state= {
             verMas: false,
             textoBoton: 'Ver más'
-        })
+        }
     }
 
     mostrarMas(){
@@ -34,19 +34,33 @@ class Home extends Component {
 
         <section>
             <h2>TopHub</h2>
+
             <img src='' alt='nombre del tema'/>
+
             <h4>Nombre del tema</h4>
+
+            { this.setState.verMas ? <p>Descripción del tema</p> : ''}
+
             <button onClick={()=> this.mostrarMas()}>{this.state.textoBoton}</button>
+
             <p>Detalle: Botón que me mande a la página de detalles.</p>
+
             <p>Favorito: Botón que agregue el tema a mis favs</p>
         </section>
 
         <section>
-            <h2>PainHub</h2>
+            <h4>PainHub</h4>
+
             <img src='' alt='nombre del tema'/>
+
             <h4>Nombre del tema</h4>
+
+            { this.setState.mostrarMas ? <p>Descripción del tema</p> : ''}
+
             <button onClick={()=> this.mostrarMas()}>{this.state.textoBoton}</button>
+
             <p>Detalle: Botón que me mande a la página de detalles.</p>
+
             <p>Favorito: Botón que agregue el tema a mis favs</p>
         </section>
 
