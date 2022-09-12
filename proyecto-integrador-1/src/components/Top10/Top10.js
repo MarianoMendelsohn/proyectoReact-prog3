@@ -1,5 +1,6 @@
 import React , {Component} from 'react';
-import Tarjeta from '../Card/Tarjet';
+import Tarjeta from '../Tarjeta/Tarjeta';
+import './styles.css'
 
 class Top10 extends Component{
     constructor(props){
@@ -11,7 +12,7 @@ class Top10 extends Component{
 
     componentDidMount(){
         
-        let top10 = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks&top?limit=10'
+        let top10 = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks&top?index=12limit=10'
 
         fetch(top10)
         .then(response => response.json())
@@ -29,8 +30,6 @@ class Top10 extends Component{
             <div>
             <section>
             <h2 className='titulo'>TopHub</h2>
-
-            <img src= '' alt='nombre del tema'/>
 
             {
             this.state.data.length > 0 ?

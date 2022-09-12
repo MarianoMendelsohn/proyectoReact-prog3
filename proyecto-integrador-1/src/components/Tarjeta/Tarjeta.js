@@ -10,7 +10,11 @@ class Tarjeta extends Component {
     }
   render() {
     return (
+      <div className='contenedor1'>
+      <img  src={this.props.info.cover} alt='img de la canción'/>
       <h4>{this.props.info.title}</h4>
+      <p></p>
+      </div>
     )
   }
 }
