@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './styles.css'; 
+import Buscador from '../Buscador/Buscador'
+import Top10 from '../Top10/Top10';
 
 
 class Home extends Component {
@@ -7,10 +9,21 @@ class Home extends Component {
     constructor(props){
         super(props)
         this.state= {
+            topList:{},
             verMas: false,
-            textoBoton: 'Ver más'
+            textoBoton: 'Ver más',
+            resultadoDeBusqueda: []
         }
     }
+
+    // buscarData(valor){
+    // fetch('https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/https://api.deezer.com/search?q={valor}')
+    // .then(resouesta => respuesta.json())
+    // .then (data => console.log(data))
+    // .then(error => console.log(error))
+    // }
+
+    
 
     mostrarMas(){
         if (this.state.verMas) {
@@ -32,21 +45,16 @@ class Home extends Component {
 
     <div>
 
-        <section>
-            <h2>TopHub</h2>
+        <Buscador metodoQueBusca={(valor)=> this.buscarData}/>
 
-            <img src='' alt='nombre del tema'/>
+        {/* {
+            this.state.resultadoDeBusqueda.length > 0
+            ?
+            <Tarjetas info= {this.state.resultadoDeBusqueda}/>
+            :''
+        } */}
 
-            <h4>Nombre del tema</h4>
-
-            { this.setState.verMas ? <p>Descripción del tema</p> : ''}
-
-            <button onClick={()=> this.mostrarMas()}>{this.state.textoBoton}</button>
-
-            <p>Detalle: Botón que me mande a la página de detalles.</p>
-
-            <p>Favorito: Botón que agregue el tema a mis favs</p>
-        </section>
+       <Top10/>
 
         <section>
             <h4>PainHub</h4>

@@ -1,13 +1,14 @@
-div {
-    background-color: orange;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .identidad {
   display: flexbox;
   justify-content: center;
   align-items: center;
+  background-color: orange;
+}
+
+.nombre {
+  color: black;
 }
 
 .logo {

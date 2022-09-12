@@ -9,7 +9,7 @@ function Header(props) {
                     
                     <img className= "logo" src= './MusicHubLogo.jpeg' alt='MusicHub'></img> 
 
-                     <h1>MusicHub</h1>
+                     <h1 className='nombre'>MusicHub</h1>
                      
                 </div>
                 <div className="nav-bar">
