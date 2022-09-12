@@ -1,10 +1,11 @@
 import React , {Component} from 'react';
+import Tarjeta from '../Card/Tarjet';
 
 class Top10 extends Component{
     constructor(props){
         super(props)
         this.state ={
-
+            data:[]
         }
     }
 
@@ -14,9 +15,11 @@ class Top10 extends Component{
 
         fetch(top10)
         .then(response => response.json())
-        .then(data => this.setState(
+        .then(data => {
+            console.log(data)
+            this.setState(
             {data: data.data}
-        ))
+        )})
         .catch(error=> console.log(error))
     }
 
@@ -29,7 +32,12 @@ class Top10 extends Component{
 
             <img src= '' alt='nombre del tema'/>
 
-            {this.state.data.map((title)=> <h4> {title.title}</h4>)}
+            {
+            this.state.data.length > 0 ?
+            this.state.data.map((elemento)=> <Tarjeta info={elemento} />)
+            : 'Cargando..'
+            
+            }
 
             { this.setState.verMas ? <p>Descripción del tema</p> : ''}
 

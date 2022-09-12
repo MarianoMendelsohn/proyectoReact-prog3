@@ -63,7 +63,7 @@ class Home extends Component {
 
             <h4>Nombre del tema</h4>
 
-            { this.setState.mostrarMas ? <p>Descripción del tema</p> : ''}
+            {/* { this.setState.mostrarMas ? <p>Descripción del tema</p> : ''} */}
 
             <button onClick={()=> this.mostrarMas()}>{this.state.textoBoton}</button>
 
