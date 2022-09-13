@@ -12,14 +12,14 @@ class Top10 extends Component{
 
     componentDidMount(){
         
-        let top10 = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks&top?index=12limit=10'
+        let top10 = 'https://api.themoviedb.org/3/movie/550?api_key=ab1dad43417703bd59209ba154fb4880'
 
         fetch(top10)
         .then(response => response.json())
         .then(data => {
             console.log(data)
             this.setState(
-            {data: data.data}
+            {data: data.results}
         )})
         .catch(error=> console.log(error))
     }
