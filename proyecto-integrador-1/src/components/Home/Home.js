@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import './styles.css'; 
-import Buscador from '../Buscador/Buscador'
-import Top10 from '../Top10/Top10';
+import MoviesPopulares from '../MoviesPopulares/MoviesPopulares';
+import MoviesMejores from '../MoviesMejores/MoviesMejores'
+// import Buscador from '../Buscador/Buscador'
+
+
+let pelisPopulares = "https://api.themoviedb.org/3/movie/popular?api_key=ab1dad43417703bd59209ba154fb4880&language=en-US&page=1"
+let mejoresPelis = "https://api.themoviedb.org/3/movie/popular?api_key=ab1dad43417703bd59209ba154fb4880"
 
 
 class Home extends Component {
@@ -9,10 +14,11 @@ class Home extends Component {
     constructor(props){
         super(props)
         this.state= {
-            topList:{},
             verMas: false,
             textoBoton: 'Ver más',
-            resultadoDeBusqueda: []
+            resultadoDeBusqueda: [],
+            masPopulares: [],
+            lasMejores: []
         }
     }
 
@@ -23,7 +29,29 @@ class Home extends Component {
     // .then(error => console.log(error))
     // }
 
-    
+    componentDidMount(){
+
+        fetch(pelisPopulares)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            this.setState({
+                masPopulares: data.results,
+            }
+            )})
+        .catch(error=> console.log(error))
+
+
+        fetch(mejoresPelis)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            this.setState({
+                lasMejores: data.results,
+            }
+        )})
+        .catch(error=> console.log(error))
+    }
 
     mostrarMas(){
         if (this.state.verMas) {
@@ -44,8 +72,35 @@ class Home extends Component {
     return(
 
     <div>
+         <h1>Peliculas populares</h1>
+        <section>
+             {
+                this.state.masPopulares.length === 0 ?
+                <p>Cargando...</p>
+                :
+                this.state.masPopulares.map((Pelicula , idx) => <MoviesPopulares key={Pelicula.name + idx} popularesData={Pelicula} />)
+            } 
+        </section>
+        <h1>Las peliculas del momento</h1>
+        <section>
+             {
+                this.state.lasMejores.length === 0 ?
+                <p>Cargando...</p>
+                :
+                this.state.lasMejores.map((Peliculas , idx) => <MoviesMejores key={Peliculas.name + idx} lasMejoresData={Peliculas} />)
+            } 
+        </section>
 
-        <Buscador metodoQueBusca={(valor)=> this.buscarData}/>
+
+
+
+
+
+
+
+
+
+        {/* <Buscador metodoQueBusca={(valor)=> this.buscarData}/> */}
 
         {/* {
             this.state.resultadoDeBusqueda.length > 0
@@ -54,23 +109,9 @@ class Home extends Component {
             :''
         } */}
 
-       <Top10/>
+       
 
-        <section>
-            <h4>PainHub</h4>
-
-            <img src='' alt='nombre del tema'/>
-
-            <h4>Nombre del tema</h4>
-
-            {/* { this.setState.mostrarMas ? <p>Descripción del tema</p> : ''} */}
-
-            <button onClick={()=> this.mostrarMas()}>{this.state.textoBoton}</button>
-
-            <p>Detalle: Botón que me mande a la página de detalles.</p>
-
-            <p>Favorito: Botón que agregue el tema a mis favs</p>
-        </section>
+        
 
 </div>
 

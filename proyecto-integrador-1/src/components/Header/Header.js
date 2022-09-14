@@ -7,7 +7,7 @@ function Header(props) {
             <div>
                 <div className = "identidad"> 
                     
-                    <img className= "logo" src= './MusicHubLogo.jpeg' alt='MusicHub'></img> 
+                    <img className= "logo" src= './movieSlogan.jpeg' alt='MusicHub'></img> 
 
                      <h1 className='nombre'>MusicHub</h1>
                      
