@@ -1,0 +1,35 @@
+.card{
+    max-width: 350px;
+    max-height: 800px;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(37, 49, 109);
+    justify-content: center;
+    border-radius: 3%;
+}
+
+h2 , p {
+    color: rgb(254, 245, 172);
+}
+
+img {
+    size: 250px;
+}
+
+.presente{
+    display: block;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: rgb(254, 245, 172) ;
+}
+
+.oculta{
+    display: none;
+}
+
+.overview {
+    font-size:15px;
+
+    display: block;
+    
+}

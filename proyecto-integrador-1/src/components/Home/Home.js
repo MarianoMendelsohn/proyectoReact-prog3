@@ -71,9 +71,9 @@ class Home extends Component {
 
     return(
 
-    <div>
-         <h1>Peliculas populares</h1>
-        <section>
+    <div className='home'>
+         <h1 className='sectionTitles'>Peliculas populares</h1>
+        <section className='cardContainer'>
              {
                 this.state.masPopulares.length === 0 ?
                 <p>Cargando...</p>
@@ -81,8 +81,8 @@ class Home extends Component {
                 this.state.masPopulares.map((Pelicula , idx) => <MoviesPopulares key={Pelicula.name + idx} popularesData={Pelicula} />)
             } 
         </section>
-        <h1>Las peliculas del momento</h1>
-        <section>
+        <h1 className='sectionTitles'>Las peliculas del momento</h1>
+        <section className='cardContainer'>
              {
                 this.state.lasMejores.length === 0 ?
                 <p>Cargando...</p>

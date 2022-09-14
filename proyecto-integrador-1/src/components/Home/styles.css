@@ -1,0 +1,16 @@
+.sectionTitles {
+    color: rgb(254, 245, 172);
+    background-color: rgb(95, 111, 148);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    background-color: rgb(254, 245, 172);
+}

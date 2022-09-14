@@ -2,23 +2,24 @@ import React from 'react';
 import './styles.css';
 
 function Header(props) {
-    return (
-        <header>
-            <div>
-                <div className = "identidad"> 
+    return ( 
+
+            <header className='header'>
+            
+                <section className = "identidad"> 
                     
                     <img className= "logo" src= './movieSlogan.jpeg' alt='MusicHub'></img> 
 
-                     <h1 className='nombre'>MusicHub</h1>
+                     <h1 className='nombre'>Movies</h1>
                      
-                </div>
-                <div className="nav-bar">
-                    <nav>
+                </section>
+                <div>
+                    <nav className="navBar">
                     {props.menu.map((opcion, idx) =><li key={`${Date.now()}-${idx}`} >{opcion}</li>)}
                     </nav>
                 </div>
-            </div>
-        </header>
+            
+            </header>
     )
 }
 
