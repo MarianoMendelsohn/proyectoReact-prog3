@@ -52,4 +52,4 @@ class MoviesPopulares extends Component {
     }
 
 }
-export default MoviesPopulares
+export default MoviesPopulares;

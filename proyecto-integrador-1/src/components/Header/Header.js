@@ -15,7 +15,7 @@ function Header(props) {
                 </section>
                 <div>
                     <nav className="navBar">
-                    {props.menu.map((opcion, idx) =><li key={`${Date.now()}-${idx}`} >{opcion}</li>)}
+                 { /* {props.menu.map((opcion, idx) =><li key={`${Date.now()}-${idx}`} >{opcion}</li>)}*/ }
                     </nav>
                 </div>
             

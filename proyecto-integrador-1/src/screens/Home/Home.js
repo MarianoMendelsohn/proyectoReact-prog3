@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './styles.css'; 
-import MoviesPopulares from '../MoviesPopulares/MoviesPopulares';
-import MoviesMejores from '../MoviesMejores/MoviesMejores'
+import './style.css';
+import MoviesPopulares from '../../components/MoviesPopulares/MoviesPopulares';
+import MoviesMejores from '../../components/MoviesMejores/MoviesMejores';
 // import Buscador from '../Buscador/Buscador'
 
 
@@ -117,4 +117,4 @@ class Home extends Component {
 
 )}}
 
-export default Home
+export default Home;

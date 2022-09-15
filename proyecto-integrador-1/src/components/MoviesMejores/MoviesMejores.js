@@ -52,4 +52,4 @@ class MoviesMejores extends Component {
     }
 
 }
-export default MoviesMejores
+export default MoviesMejores;
