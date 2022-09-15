@@ -28,7 +28,7 @@ class MoviesMejores extends Component {
     }
            
     render() {
-        console.log(this.state)
+        
         return(
             <>
             <article className='card'>
@@ -43,7 +43,8 @@ class MoviesMejores extends Component {
                 <div>
                     
                         <button>Ir a detalle</button>
-    
+                        {/* <button onClick={() => this.props.setFavs((prev) => {  return [...prev, this.props.lasMejoresData.title]})  } >  Argregar a favoritos </button>
+     */}
                     {/* <button onClick={() => this.adminFavoritos(this.props.datosPeliculasPop.id)}>{this.state.favsLegend}</button> */}
                 </div>
 

@@ -42,6 +42,7 @@ class MoviesPopulares extends Component {
                 <div>
                     
                         <button>Ir a detalle</button>
+                        <button>Agregar a Favoritos</button>
     
                     {/* <button onClick={() => this.adminFavoritos(this.props.datosPeliculasPop.id)}>{this.state.favsLegend}</button> */}
                 </div>
