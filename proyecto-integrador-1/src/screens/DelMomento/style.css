@@ -1,0 +1,38 @@
+.delMomento {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    padding: 60px 120px;
+  }
+  
+  .delMomento div {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid #e7e7e7;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.02);
+    border-radius: 16px;
+  }
+  
+  .delMomento div h1 {
+    font-size: 18px;
+    color: black;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .delMomento div p {
+    font-size: 14px;
+    color: rgb(42, 42, 42);
+    line-height: 1.2;
+  }
+
+  .delMomento div img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 12px;
+  }

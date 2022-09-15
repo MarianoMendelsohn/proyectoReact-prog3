@@ -4,7 +4,8 @@ import Footer from './components/Footer/Footer';
 import Home from './screens/Home/Home';
 import DetallePelicula from './screens/DetallePelicula/DetallePelicula';
 import NotFound from './screens/NotFound/NotFound';
-import {Route,Switch} from 'react-router-dom';
+import {Route,Routes} from 'react-router-dom';
+import DelMomento from './screens/DelMomento/delMomento';
 
 
 
@@ -16,18 +17,14 @@ function App() {
     <React.Fragment>
       <Header />
       <main>
-        <Switch>
-          <Route path = '/' exact= {true} component={Home} />
+        <Routes>
+          <Route path = '/' exact= {true} element={<Home/>} />
+          <Route path = '/NotFound' element={<NotFound/>} /> 
+          <Route path = '/pelicula/id/:id' element={<DetallePelicula/>} />
+          <Route path = '/populares' element={<DelMomento/>} />
+          <Route path = '/momento' element={<DetallePelicula/>} />
 
-          <Route path = '/NotFound' component={NotFound} /> 
-
-        
-
-          <Route path = '/pelicula/id/:id' component={DetallePelicula} />
-
-         
-
-        </Switch>
+        </Routes>
       </main>
     
 

@@ -17,17 +17,18 @@ class MoviesMejores extends Component {
         if(this.state.descripcion === 'oculta'){
             this.setState({
                 descripcion: 'presente',
-                textoVerMas: 'Ocultar descripción'
+                textoVerMas: 'Ocultar Descripción'
             })
         } else {
             this.setState({
                 descripcion: 'oculta', 
-                textoVeras: 'Ver descripción'
+                textoVerMas: 'Ver Descripción'
             })
         }
     }
-
+           
     render() {
+        console.log(this.state)
         return(
             <>
             <article className='card'>

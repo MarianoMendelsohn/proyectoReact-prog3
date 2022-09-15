@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './style.css';
 import MoviesPopulares from '../../components/MoviesPopulares/MoviesPopulares';
 import MoviesMejores from '../../components/MoviesMejores/MoviesMejores';
+import { Link } from 'react-router-dom'
 // import Buscador from '../Buscador/Buscador'
 
 
@@ -78,16 +79,20 @@ class Home extends Component {
                 this.state.masPopulares.length === 0 ?
                 <p>Cargando...</p>
                 :
-                this.state.masPopulares.map((Pelicula , idx) => <MoviesPopulares key={Pelicula.name + idx} popularesData={Pelicula} />)
+                this.state.masPopulares.slice(0, 3).map((Pelicula , idx) => <MoviesPopulares key={Pelicula.name + idx} popularesData={Pelicula} />)
             } 
         </section>
+        <Link to={"/populares"}>
+        <li className="link">Ver todas</li>
+         </Link>
+
         <h1 className='sectionTitles'>Las peliculas del momento</h1>
         <section className='cardContainer'>
              {
                 this.state.lasMejores.length === 0 ?
                 <p>Cargando...</p>
                 :
-                this.state.lasMejores.map((Peliculas , idx) => <MoviesMejores key={Peliculas.name + idx} lasMejoresData={Peliculas} />)
+                this.state.lasMejores.slice(0, 3).map((Peliculas , idx) => <MoviesMejores key={Peliculas.name + idx} lasMejoresData={Peliculas} />)
             } 
         </section>
 

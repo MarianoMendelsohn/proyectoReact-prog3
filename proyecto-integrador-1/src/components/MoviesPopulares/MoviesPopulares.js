@@ -21,7 +21,7 @@ class MoviesPopulares extends Component {
         } else {
             this.setState({
                 descripcion: 'oculta', 
-                textoVeras: 'Ver descripción'
+                textoVerMas: 'Ver descripción'
             })
         }
     }
