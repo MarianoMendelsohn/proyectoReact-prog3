@@ -7,67 +7,72 @@ import { Link } from "react-router-dom";
 
 let pelisPopulares =
   "https://api.themoviedb.org/3/movie/popular?api_key=ab1dad43417703bd59209ba154fb4880&language=en-US&page=1";
-let mejoresPelis =
-  "https://api.themoviedb.org/3/movie/popular?api_key=ab1dad43417703bd59209ba154fb4880";
+let seriesPopulares =
+  "https://api.themoviedb.org/3/tv/top_rated?api_key=ab1dad43417703bd59209ba154fb4880";
 
-const Home = ({ setFavs }) => {
-  const [masPopulares, setMasPopulares] = useState([]);
-  const [lasMejores, setLasMejores] = useState([]);
+const Home = ({ setPelisFavs, setSeriesFavs }) => {
+  const [peliculasPopulares, setPeliculasPopulares] = useState([0, -1]);
+  const [seriesRated, setSeriesPopulares] = useState([]);
 
   useEffect(() => {
     fetch(pelisPopulares)
       .then((response) => response.json())
       .then((data) => {
-        setMasPopulares(data.results);
+        setPeliculasPopulares(data.results);
       })
       .catch((error) => console.log(error));
 
-    fetch(mejoresPelis)
+    fetch(seriesPopulares)
       .then((response) => response.json())
       .then((data) => {
-        setLasMejores(data.results);
+        setSeriesPopulares(data.results);
       })
       .catch((error) => console.log(error));
   }, []);
-
   return (
     <div className="home">
       <h1 className="sectionTitles">Peliculas populares</h1>
       <section className="cardContainer">
-        {masPopulares.length === 0 ? (
+        {peliculasPopulares.length === 0 ? (
           <p>Cargando...</p>
         ) : (
-          masPopulares
+          peliculasPopulares
             .slice(0, 3)
-            .map((Pelicula, idx) => (
+            .map((Pelicula) => (
               <MoviesPopulares
-                key={Pelicula.name + idx}
+                key={Pelicula.id}
                 popularesData={Pelicula}
-                setFavs={setFavs}
+                setFavs={setPelisFavs}
               />
             ))
         )}
       </section>
-      <Link to={"/populares"}>
+      <Link to={"/verTodasPeliculas"}>
         <li className="link">Ver todas</li>
+      </Link>
+      <Link to={"/favoritosPelis"}>
+        <li className="link">Favoritos</li>
       </Link>
 
       <h1 className="sectionTitles">Las peliculas del momento</h1>
       <section className="cardContainer">
-        {lasMejores.length === 0 ? (
+        {seriesRated.length === 0 ? (
           <p>Cargando...</p>
         ) : (
-          lasMejores
+          seriesRated
             .slice(0, 3)
-            .map((pelicula, idx) => (
+            .map((pelicula) => (
               <MoviesMejores
-                key={pelicula.name + idx}
+                key={pelicula.id}
                 lasMejoresData={pelicula}
-                setFavs={setFavs}
+                setFavs={setSeriesFavs}
               />
             ))
         )}
       </section>
+      <Link to={"/verTodasSeries"}>
+        <li className="link">Ver todas</li>
+      </Link>
     </div>
   );
 };

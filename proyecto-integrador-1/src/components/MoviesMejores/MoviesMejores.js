@@ -26,6 +26,10 @@ class MoviesMejores extends Component {
             })
         }
     }
+
+    agregarFav(){
+        this.props.setFavs(current => [...current , this.props.lasMejoresData.id])
+    }
            
     render() {
         
@@ -43,6 +47,7 @@ class MoviesMejores extends Component {
                 <div>
                     
                         <button>Ir a detalle</button>
+                        <button onClick={() => this.agregarFav()} >Agregar a Favoritos</button>
                         {/* <button onClick={() => this.props.setFavs((prev) => {  return [...prev, this.props.lasMejoresData.title]})  } >  Argregar a favoritos </button>
      */}
                     {/* <button onClick={() => this.adminFavoritos(this.props.datosPeliculasPop.id)}>{this.state.favsLegend}</button> */}

@@ -26,6 +26,10 @@ class MoviesPopulares extends Component {
         }
     }
 
+    agregarFav(){
+        this.props.setFavs(current => [...current , this.props.popularesData.id])
+    }
+
     render() {
         return(
             <>
@@ -42,9 +46,7 @@ class MoviesPopulares extends Component {
                 <div>
                     
                         <button>Ir a detalle</button>
-                        <button>Agregar a Favoritos</button>
-    
-                    {/* <button onClick={() => this.adminFavoritos(this.props.datosPeliculasPop.id)}>{this.state.favsLegend}</button> */}
+                        <button onClick={() => this.agregarFav()} >Agregar a Favoritos</button>
                 </div>
 
             </article>
