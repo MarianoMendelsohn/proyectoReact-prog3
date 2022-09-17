@@ -1,0 +1,283 @@
+/* Resets */
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+ul,ol {
+    padding: 0;
+}
+li {
+    list-style-type:none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    text-decoration: underline;
+  }
+  
+a:active {
+    text-decoration: underline;
+  }
+body {
+    margin: 0;
+    background-color: #eee;
+    padding-bottom: 150px;
+}
+
+/* Navigation */
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 20px;
+    color: #fff;
+    background-color: #dedede;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+   
+}
+
+.main-nav li,
+.user li {
+    margin: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-nav li:first-child {
+    font-weight: bold;
+}
+
+.logo {
+    width: 200px;
+    margin-left: 10px;
+    
+}
+
+h1,h2 {
+    font-weight: 400;
+}
+
+h1,
+main {
+    padding: 0 30px;
+}
+
+/* Top data */
+.top-data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #666;
+}
+.data-detail {
+    width: 32%;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 10px 30px;
+    text-transform: capitalize;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.data-detail p {
+    margin-top:0;
+}
+.data-detail h4 {
+    margin-bottom: 0;
+}
+
+/* Categorías */
+.general-data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px 20px 10px 20px;
+}
+.general-data .card {
+    width: 32%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    color: #fff;
+}
+
+/* Characters Container */
+.cardContainer {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.character-card{
+    color: #777;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    width: 20%;
+    background: rgb(108, 125, 124);
+    border-radius: 15px;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);    
+    display: flex;
+    flex-direction: column;
+    width: 21%;
+    margin: 2%;
+    padding: 2%;
+    background-color: white;
+}
+.character-card img{
+    width: 60%;
+    margin-bottom: 20px; 
+    border-radius: 20px;
+}
+.character-card:hover,
+.active{
+box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
+}
+.character-card p {
+    margin: 3px 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+.character-card h2 {
+    margin: 2px 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* footer */
+footer {
+    background-color: #dedede;
+    text-align: center;
+    padding: 40px 0;
+    color: #666;
+    bottom: 0;
+    width: 100%;
+}
+
+/* From uiverse.io by @alexruix */
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+   }
+   
+   .input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+   }
+   
+   .input::placeholder {
+    color: #9e9ea7;
+   }
+   
+   .input:focus, input:hover {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+   }
+   
+   .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+   }
+
+/* From uiverse.io by @satyamchaudharydev */
+.loader {
+    --height-of-loader: 4px;
+    --loader-color: #0071e2;
+    width: 60%;
+    height: var(--height-of-loader);
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.2);
+    position: relative;
+   }
+   
+   .loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 1s ease-in-out infinite;
+    ;
+   }
+   
+   @keyframes moving {
+    50% {
+     width: 100%;
+    }
+   
+    100% {
+     width: 0;
+     right: 0;
+     left: unset;
+    }
+   }
+   /* From uiverse.io by @bhaveshxrawat */
+.button-card {
+    background-color: #fff;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    letter-spacing: .25px;
+    line-height: normal;
+    padding: 11px 24px;
+    transition: background box-shadow 280ms ease;
+   }
+   
+   button:hover {
+    background: #F6F9FE;
+    color: #364c9d;
+   }
+   
+   button:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+    border: 2px solid #4285f4;
+   }
+   
+   
+   
+   
