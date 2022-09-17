@@ -22,30 +22,81 @@ a:active {
   }
 body {
     margin: 0;
-    background-color: #eee;
+    background-color: black;
     padding-bottom: 150px;
 }
 
+h1 , h2 , h3 , p {
+    color: #ff003b;
+}
 /* Navigation */
 nav{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    justify-content:left;
     padding: 20px 20px;
     color: #fff;
-    background-color: #dedede;
+    background-color: #fff /* #dedede; */
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-   
+    align-items:center;
+       
 }
 
-.main-nav li,
+.main-nav{
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.li-nav{
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+}
+
+.li-nav span {
+    position: relative;
+    z-index: 2;
+}
+
+.li-nav:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+}
+  
+.li-nav:hover{
+    color: #fff;
+}
+  
+.li-nav:hover:after{
+    width: 100%;
+}
+
+li,
 .user li {
     margin: 0 10px;
     display: flex;
@@ -59,9 +110,9 @@ nav ul {
 }
 
 .logo {
-    width: 200px;
+    width: 120px;
     margin-left: 10px;
-    
+    border-radius: 50%;
 }
 
 h1,h2 {
@@ -135,7 +186,7 @@ main {
     width: 20%;
     background: rgb(108, 125, 124);
     border-radius: 15px;
-    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);    
+    box-shadow: 0 .15rem 1.75rem rgba(58,59,69,.15);
     display: flex;
     flex-direction: column;
     width: 21%;
@@ -150,7 +201,7 @@ main {
 }
 .character-card:hover,
 .active{
-box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
+box-shadow: 0rem 0rem 10px 8px  #ff003b;/*rgb(58 59 69 / 25%);*/
 }
 .character-card p {
     margin: 3px 0;

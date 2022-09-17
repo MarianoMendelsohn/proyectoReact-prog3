@@ -36,10 +36,6 @@ class SeriesCard extends Component{
 
                     <button className='button-card'onClick={()=>this.verMas(this.state.estadoDetalle)}>{this.state.textoDetalle}</button>
 
-                    <article className={this.state.verMas == true}>
-                        <p className={this.state.estadoDetalle}> Sinopsis: {this.props.datosSerie.overview}</p>
-                    </article>
-
                 <Link to={`/serie/id/${this.props.datosSerie.id}`}>
                     <p>Ir a detalle</p>
                 </Link>

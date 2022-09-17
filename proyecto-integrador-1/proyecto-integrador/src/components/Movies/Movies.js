@@ -50,6 +50,17 @@ class Movies extends Component{
 
         </div>*/}
             <div>
+                <h2>Series Populares</h2>
+                <Link to='/series'><h3>Ver todas las series populares</h3></Link>
+            </div>
+            <section className='cardContainer'>
+                {
+                    this.state.series.map((unaSerie,idx) => <SeriesCard key={unaSerie.title+idx} datosSerie = {unaSerie}/>)
+                }
+                
+            </section>
+
+            <div>
                 <h2>Peliculas Populares</h2>
                 <Link to='/peliculas'><h3>Ver todas las películas populares</h3></Link>
             </div>
@@ -60,17 +71,7 @@ class Movies extends Component{
                 
             </section>
 
-            <div>
-                <h2>Series Populares</h2>
-                <Link to='/series'><h3>Ver todas las series populares</h3></Link>
-            </div>
-            <section className='cardContainer'>
-                {
-                    this.state.series.map((unaSerie,idx) => <SeriesCard key={unaSerie.title+idx} datosSerie = {unaSerie}/>)
-                }
-                
-
-            </section>
+            
 
             </React.Fragment>
         )

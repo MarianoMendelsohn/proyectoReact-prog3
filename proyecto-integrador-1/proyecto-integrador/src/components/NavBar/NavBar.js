@@ -1,26 +1,30 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Formulario from "../Formulario/Formulario";
+import './styles.css'
 
 function Navbar(){
     return (
         <nav>
             <Link to={'/'}>
-                <img className="logo" src="./img/Kodak-Motion-Picture-Film-Logo.png" alt=""/>
+                <img className="logo" src="./movieSlogan.jpeg" alt=""/>
             </Link>
             
             <ul className="main-nav">
-            <li>
-               <Link to='/'>Home</Link>
+
+            <li className='li-nav'>
+               <Link to='/'><span>Home</span></Link>
             </li>
-            <li>
-                <Link to='/favoritos'>Favoritos</Link>
+
+            <li className='li-nav'>
+                <Link to='/favoritos'><span>Favoritos</span></Link>
             </li>
-            <li>
-                <Link to='/peliculas'>Películas</Link>
+
+            <li className='li-nav'>
+                <Link to='/peliculas'><span>Películas</span></Link>
             </li>
-            <li>
-                <Link to='/series'>Series</Link>
+
+            <li className='li-nav'>
+                <Link to='/series'><span>Series</span></Link>
             </li>
             
            
