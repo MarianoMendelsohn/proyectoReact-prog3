@@ -6,7 +6,7 @@ class MovieCard extends Component{
         super(props)
         this.state={
             estadoDetalle: 'hide',
-            textoDetalle: 'Ver más',
+            textoDetalle: 'sinopsis',
             favsMessage: "Fav"
         }
     }
@@ -14,11 +14,11 @@ class MovieCard extends Component{
     verMas(){
         if(this.state.estadoDetalle === 'show'){
           this.setState({
-            estadoDetalle:'hide', textoDetalle: 'Ver más'
+            estadoDetalle:'hide', textoDetalle: 'sinopsis'
           })
         } else {
           this.setState({
-            estadoDetalle:'show', textoDetalle: 'Ver menos'
+            estadoDetalle:'show', textoDetalle: 'Ocultar Sinopsis'
           })
         }
     }
