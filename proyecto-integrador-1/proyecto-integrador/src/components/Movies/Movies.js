@@ -6,7 +6,7 @@ import SeriesCard from "../SeriesCard/SeriesCard";
 import {Link} from 'react-router-dom'
 
 
-let api_key = "721e0f004fb3c7ef9d923185f3cc41d6"
+let api_key = "dbc2844dc7f234cc66f323810714162c"
 
 class Movies extends Component{
     constructor(props){

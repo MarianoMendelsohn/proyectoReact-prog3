@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-let api_key = "7a176cc95147be6e695be2faf0e8ff9c"
+let api_key = "dbc2844dc7f234cc66f323810714162c"
 
 class DetallePelicula extends Component{
     constructor(props){

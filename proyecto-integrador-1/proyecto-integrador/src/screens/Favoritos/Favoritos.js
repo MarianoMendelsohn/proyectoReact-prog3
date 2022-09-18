@@ -20,7 +20,7 @@ class Favoritos extends Component {
             favoritos = JSON.parse(recuperoStorage) // array de ids
 
             favoritos.forEach(unIdFavorito => {
-                let api_key = "721e0f004fb3c7ef9d923185f3cc41d6";
+                let api_key = "dbc2844dc7f234cc66f323810714162c";
 
                 fetch(`https://api.themoviedb.org/3/movie/${unIdFavorito}?api_key=${api_key}&language=en-US&page=1`)
                     .then(res => res.json())

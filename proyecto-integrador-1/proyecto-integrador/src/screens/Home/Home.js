@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Movies from "../../components/Movies/Movies";
 import MovieCard from "../../components/MovieCard/MovieCard";
-let api_key = "721e0f004fb3c7ef9d923185f3cc41d6";
+let api_key = "dbc2844dc7f234cc66f323810714162c";
 
 class Home extends Component{ /* este es un componente con estado asi el componente puede reaccionar a los eventos que pasan dentro de si mismo*/
     
