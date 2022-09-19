@@ -1,5 +1,5 @@
 import React from "react";
-import {Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Home from "./screens/Home/Home";
 import Favoritos from "./screens/Favoritos/Favoritos";
@@ -15,7 +15,7 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <React.Fragment>
+    <BrowserRouter>
 
       <Navbar />
 
@@ -42,7 +42,7 @@ function App() {
 
       <Footer />
 
-    </React.Fragment>
+    </BrowserRouter>
   );
 }
 

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import './styles.css'
+
 class MovieCard extends Component{
     constructor(props){
         super(props)
@@ -48,12 +49,12 @@ class MovieCard extends Component{
             favoritos = favoritosToArray
         }
 
-        if(favoritos.includes(id)){ //metodo includes retorna booleano
+        if(favoritos.includes(id)){ 
 
-            // quito el elemento favorito del array
+           
             favoritos = favoritos.filter(unId => unId !== id)
 
-            // seteo el favsMessage del elemento 
+            
             this.setState({
                 favsMessage: "Fav"
             })
@@ -84,7 +85,7 @@ class MovieCard extends Component{
 
                     <button className='button-card'onClick={()=>this.verMas(this.state.estadoDetalle)}>{this.state.textoDetalle}</button>
 
-                    <button className="button-card"onClick={()=>this.favoritosToggle(this.props.datosPelicula.id)} >{/*<FontAwesomeIcon icon={faStar}/>*/}{this.state.favsMessage}</button>
+                    <button className="button-card"onClick={()=>this.favoritosToggle(this.props.datosPelicula.id)} >{this.state.favsMessage}</button>
 
                     <article className={this.state.verMas == true}>
                         <p className={this.state.estadoDetalle}> Sinopsis: {this.props.datosPelicula.overview}</p>
@@ -96,7 +97,7 @@ class MovieCard extends Component{
                 </Link>
 
                 </article>
-                {/* <button onClick=()>Favoritos</button> */}
+                
             </section>
         )
     }

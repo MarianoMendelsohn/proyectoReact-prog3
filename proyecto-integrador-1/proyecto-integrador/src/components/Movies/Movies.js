@@ -1,5 +1,3 @@
-//ARCHIVO QUE TRAE LAS PELICULAS MAS POPULARES Y LANZZAMIENTOS
-
 import React, { Component } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import SeriesCard from "../SeriesCard/SeriesCard";
@@ -18,7 +16,7 @@ class Movies extends Component{
     }
 
     componentDidMount(){ 
-        //Peliculas Populares
+        
         fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=1`)
         .then(res => res.json())
         .then(data => this.setState(
@@ -26,7 +24,7 @@ class Movies extends Component{
         ))
         .catch(e => console.log(e))
 
-        //Series Populares
+        
         fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${api_key}&language=en-US&page=1`)
         .then(res => res.json())
         .then(data => this.setState(
@@ -36,19 +34,12 @@ class Movies extends Component{
     }
 
     render(){
-        // console.log(this.state.peliculas);
-        // console.log(this.state.series);
+        
 
         return(
             <React.Fragment> 
 
-            {/*<div>
-                {this.state.datos === ""?
-                <h3>Cargando...</h3> :
-                <h3>{this.state.peliculas}</h3>}
-                <p>Hola mundo</p>
-
-        </div>*/}
+            
             <div>
                 <h2>Series Populares</h2>
                 <Link to='/series'><h3>Ver todas las series populares</h3></Link>
