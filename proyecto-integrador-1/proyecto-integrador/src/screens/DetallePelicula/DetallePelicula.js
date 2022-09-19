@@ -44,11 +44,6 @@ class DetallePelicula extends Component{
                     <p >{this.state.detallePelicula.overview}</p>
                     <p >Rating: {this.state.detallePelicula.vote_average}</p>
                     <p >Lanzamiento: {this.state.detallePelicula.release_date}</p>
-
-                    {/* <p> Géneros: {this.state.detallePelicula.genres.name}</p> */}
-
-                   
-
                 </article>
                 </section>
             </React.Fragment>

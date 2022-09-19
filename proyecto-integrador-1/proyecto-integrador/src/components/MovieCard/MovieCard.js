@@ -87,7 +87,7 @@ class MovieCard extends Component{
 
                     <button className="button-card"onClick={()=>this.favoritosToggle(this.props.datosPelicula.id)} >{this.state.favsMessage}</button>
 
-                    <article className={this.state.verMas == true}>
+                    <article className={this.state.verMas === true}>
                         <p className={this.state.estadoDetalle}> Sinopsis: {this.props.datosPelicula.overview}</p>
                     </article>
                 

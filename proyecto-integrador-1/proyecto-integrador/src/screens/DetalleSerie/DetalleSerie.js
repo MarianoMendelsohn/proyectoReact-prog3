@@ -34,7 +34,6 @@ class DetalleSerie extends Component{
                     <p >{this.state.detalleSerie.overview}</p>
                     <p >Rating: {this.state.detalleSerie.vote_average}</p>
                     <p >Lanzamiento: {this.state.detalleSerie.first_air_date}</p>
-                    <p >{this.state.detalleSerie.genre_ids}</p>
                 </article>
 
                 </section>
