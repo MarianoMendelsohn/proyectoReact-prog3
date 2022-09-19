@@ -24,7 +24,7 @@ guardarCambios(event){ //para guardar en el estado lo que escribio el usuario y 
 }
 
     busqueda () {
-    if(this.state.input !== ''){ /*esto es porque cuando borraba y ecribia se me salia y entonces si el input esta vacio no hago el fetch */
+    if(this.state.input !== ''){ 
             fetch(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&page=1&query=${this.state.input}`)
             .then(res => res.json())
             .then(data => {
